@@ -1,5 +1,5 @@
-var incomingEntries = SpreadsheetApp.openByUrl( 'https://docs.google.com/spreadsheets/d/10LKUByDGv88k-pGreO_6F0R0zOrXLSENGaeXOjuE8gE/edit?resourcekey#gid=1267686622');
-var inventoryData = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1pGjODntpw81Xal2ZZ0kaBUvYqYg55lsNofP0ulAffiI/edit#gid=2057417461"); 
+var incomingEntries = SpreadsheetApp.openByUrl(DOCUMENT URL);
+var inventoryData = SpreadsheetApp.openByUrl(DOCUMENT URL); 
 
 var index = incomingEntries.getLastRow(); 
 
@@ -183,8 +183,6 @@ function findColumnToChange(logRow){
 
 
 function tendInventory(){ 
-  
-
   try {
       let debug = false; 
 
@@ -236,8 +234,8 @@ function tendInventory(){
 
     } catch (error) {
       // send an email to Ashley saying something failed
-      GmailApp.sendEmail("avonedge@sfbike.org, sylvia.zahnerhoyt@gmail.com", "Subject: Failed Inventory Form Connection", 
-      "Something went wrong, you should check the inventory document: https://docs.google.com/spreadsheets/d/1pGjODntpw81Xal2ZZ0kaBUvYqYg55lsNofP0ulAffiI/edit#gid=2057417461 or the inventory tending form log: https://docs.google.com/spreadsheets/d/10LKUByDGv88k-pGreO_6F0R0zOrXLSENGaeXOjuE8gE/edit#gid=1267686622 or the submittal form https://docs.google.com/forms/d/1pNfoi4kiU5Ei152T9zizVhB17ciWnfZZLKUa7fKcLQQ/edit")
+      GmailApp.sendEmail("EMAIL@ORGANIZATION.org, EMAIL@ORGANIZATION.org", "Subject: Failed Inventory Form Connection", 
+      "Something went wrong, you should check the inventory document: DOCID or the inventory tending form log: DOCID or the submittal form DOCID")
     }
 } // end of tend inventory 
 
